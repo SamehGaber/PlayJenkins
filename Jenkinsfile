@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        
+        docker { image 'public.ecr.aws/docker/library/maven:latest' }
+    }
 
     // this section configures Jenkins options
     options {
